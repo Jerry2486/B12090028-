@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>出國旅遊網站</title>
+    <link href="https://cdn.bootcss.com/flexslider/2.6.3/flexslider.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/flexslider/2.6.3/jquery.flexslider-min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F5EFE7;
+        }
+
+        .nav {
+            background-color: #2E5077;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #2E5077;
+        }
+
+        .nav li {
+            float: left;
+        }
+
+        .nav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .nav li a:hover {
+            background-color: #4DA1A9;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        li.dropdown:hover {
+            background-color: #4DA1A9;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #2E5077;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #575757;
+        }
+
+        .banner {
+            background-image: linear-gradient(#79D7BE, #4DA1A9);
+            padding: 30px;
+            text-align: center;
+        }
+
+        .banner h1 {
+            padding: 20px;
+            color: white;
+        }
+
+        .slider {
+            margin: 20px auto;
+            width: 700px; 
+            height:500px; 
+            object-fit: cover;
+           
+        }
+
+        .faculty {
+            display: block;
+            justify-content: center;
+            background-color: white;
+            padding: 40px;
+            background-color: #FFF8E6;
+        }
+
+        .faculty h2 {
+            font-size: 25px;
+            color: rgb(50, 51, 52);
+            padding-bottom: 40px;
+        }
+
+        .faculty .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .faculty .teacher {
+            display: block;
+            text-decoration: none;
+        }
+
+        .faculty .teacher img {
+            height: 200px;
+            width: 200px;
+        }
+
+        .faculty .teacher h3 {
+            color: white;
+            background-color: #2E5077;
+            text-align: center;
+        }
+
+        .contact {
+            display: block;
+            justify-content: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .contact h2 {
+            color: rgb(54, 82, 110);
+            font-size: 25px;
+        }
+
+        .contact .infos {
+            display: flex;
+            margin-top: 30px;
+            justify-content: center;
+        }
+
+        .contact .infos .left {
+            display: block;
+            text-align: left;
+            margin-right: 30px;
+        }
+
+        .contact .infos .left b {
+            display: block;
+            text-align: left;
+            margin-top: 10px;
+            color: gray;
+            font-size: 18px;
+            line-height: 18px;
+        }
+
+        .contact .infos .left span {
+            display: block;
+            text-align: left;
+            margin-top: 10px;
+            color: rgba(39, 40, 34, 0.5);
+            font-size: 16px;
+            padding-left: 27px;
+        }
+
+        .contact .infos .right {
+            height: 200px;
+        }
+
+        .contact .infos .right iframe {
+            width: 100%;
+            height: 100%;
+            border: 1px solid rgba(39, 40, 34, 0.5);
+        }
+
+        .footer {
+            display: flex;
+            justify-content: center;
+            background-color: #2E5077;
+            padding: 30px 0;
+            color: white;
+        }
+
+        .top {
+            background-color: white;
+        }
+
+        .top .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 10px;
+        }
+
+        .top .logo {
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .top .logo img {
+            width: 100px;
+            vertical-align: middle;
+        }
+
+        .top .top-nav {
+            font-size: 20px;
+            font-weight: bold
+             color: #FF5511;          
+        }
+
+        .top .top-nav a {
+            text-decoration: none;                        
+        }
+    </style>
+</head>
+<body>
+
+<div class="top">
+    <div class="container">
+        <div class="logo">
+            <img src="https://api.logo.com/api/v2/images?design=lg_oqrRWHcYOu1sSGzkGM&u=c6a3955decfc94d53fb5d7583b120ec9bb87420aaaa7de6266ba807fcba1cc0f&width=500&height=400&margins=100&fit=contain&format=webp&quality=60&tightBounds=true">
+           fun travel
+        </div>
+       <div class="top-nav">
+           <a href="#">fun travel</a>
+           <a href="#">旅遊網站</a>
+           <a href="#">登入</a>
+       </div>
+    </div>
+</div>
+
+<div class="nav">   
+    <ul>
+        <li><a href="#">首頁</a></li>
+        <li><a href="#introduction">關於我們</a></li>
+        <li class="dropdown"><a href="#destinations">熱門目的地</a>
+            <div class="dropdown-content">
+                <a href="#destinations">歐洲</a>
+                <a href="#destinations">亞洲</a>
+                <a href="#destinations">美洲</a>
+            </div>                       
+        </li>
+        <li><a href="#contact">聯絡我們</a></li>
+    </ul>
+</div>
+
+<div class="banner" id="introduction">
+    <h1>探索世界的每個角落</h1>
+    <h1>讓我們帶您展開一場難忘的旅程</h1>
+</div>
+
+<div class="slider">
+    <div class="flexslider">
+        <ul class="slides">
+            <li><img src="https://blog-static.kkday.com/zh-hk/blog/wp-content/uploads/France_Paris_Eiffel-Tower_AFotolia_65117955-min-1-jpg.webp" alt="第一張"></li>
+            <li><img src="https://kuolife.com/wp-content/uploads/2023/05/new-york-gec6479794_1280-e1685514678370.jpg"alt="第二張"></li>
+            <li><img src="https://blog.travel4u.com.tw/wp-content/uploads/2021/07/%E6%97%A5%E6%9C%AC_%E6%9D%B1%E4%BA%AC_%E6%B7%BA%E8%8D%89-1024x684.jpg" alt="第三張"></li>
+        </ul>
+    </div>
+</div>
+
+<div class="faculty" id="destinations">
+    <h2>熱門旅遊景點</h2>
+    <div class="container">
+        <a class="teacher" href="#">
+            <img src="https://media.istockphoto.com/id/1185953092/zh/%E7%85%A7%E7%89%87/%E5%B7%B4%E9%BB%8E%E5%92%8C%E6%95%B4%E5%80%8B%E6%AD%90%E6%B4%B2%E7%9A%84%E4%B8%BB%E8%A6%81%E6%99%AF%E9%BB%9E%E6%98%AF%E5%9F%83%E8%8F%B2%E7%88%BE%E9%90%B5%E5%A1%94%E5%9C%A8%E5%A1%9E%E7%B4%8D%E6%B2%B3%E7%95%94%E7%9A%84%E5%A4%95%E9%99%BD%E4%B8%8B%E6%9C%89%E6%B8%B8%E8%BC%AA%E6%97%85%E9%81%8A%E8%88%B9.jpg?s=612x612&w=0&k=20&c=4jA2t-T8wwY2QO3BshvwIhSXvWZnDX-apQsN71g3i6U=" alt="巴黎">
+            <h3>巴黎</h3>
+        </a>
+        <a class="teacher" href="#">
+            <img src="https://media.istockphoto.com/id/1390815938/zh/%E7%85%A7%E7%89%87/tokyo-city-in-japan.jpg?s=612x612&w=0&k=20&c=AVqZnkVZ6P4nAaE6wQUWOhic6lTXnqaqrZqYW_HIxcY=" alt="東京">
+            <h3>東京</h3>
+       </a>
+       <a class="teacher" href="#">
+           <img src="https://cdn.pixabay.com/photo/2020/01/10/20/05/new-york-4756152_640.jpg" alt="紐約">
+           <h3>紐約</h3>
+       </a>        
+    </div>
+</div>
+
+<div class="contact" id="contact">
+  <h2>聯絡我們</h2>
+  <div class="infos">
+    <div class="left">
+      <b>公司地址</b>
+      <span>123 旅遊街, 旅遊市, 旅遊國</span>
+      <b>電話</b>
+      <span>(123) 456-7890</span>
+      <b>Email</b>
+      <span>info@travelwebsite.com</span>
+    </div>
+    <div class="right">
+     <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.463048583851!2d120.96490487595118!3d24.81383354712057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346835ceb9e71ff9%3A0x3b87c902f2c0d4f1!2z5paw56u55biC5peF6YGK5pyN5YuZ5Lq65ZOh6IG35qWt5bel5pyD!5e0!3m2!1szh-TW!2stw!4v1734916375537!5m2!1szh-TW!2stw" 
+    width="600" 
+    height="450" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+    &copy; 2024 fun travel網站. 版權所有。
+</div>
+
+<script>
+    $(window).load(function() {
+        $('.flexslider').flexslider({
+            animation: "slide",
+            rtl: true
+        });
+    });
+</script>
+
+</body>
+</html>
